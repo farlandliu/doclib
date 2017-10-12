@@ -1,0 +1,12 @@
+site_name: xCoding
+theme: material
+
+#pages:
+# -'Inbox': null
+# -'Linux':
+#    - cmd-line.md
+# -'DataBox': null
+
+markdown_extensions:
+  - codehilite(linenums=true)
+
