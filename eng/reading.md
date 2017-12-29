@@ -9,7 +9,7 @@ others are planning careers as a veterinarian, dentist, or optometrist
  - offers part-time and full-time schedules
  - awards a certificate to the student completing at least seven classes
 To enroll in the program , you must already have a bachelor's degree with
-a minimum of a B average and have a strong interst in the health professions. 
+a minimum of a B average and have a strong interst in the health professions.
 Applicants have passed at least one college-level science
 course in chemistry, biology or microbiology. finally, students have a strong
 desire to change career paths and be willing to engage in the rigorous
