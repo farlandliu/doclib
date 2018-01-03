@@ -39,20 +39,27 @@ endfunction " }}}
 function! s:query (word) " {{{
     let l:trimed_word = substitute(a:word, '\v[ \n\r]*$', '', '')
     let l:trimed_word = substitute(l:trimed_word, '\v[\n\r]', ' ', 'g')
-    "let l:statsline_word = substitute(l:trimed_word, '\v[ \n\r]', '\\ ', 'g')
     echo l:trimed_word
-    "execute 'setlocal statusline=[zdict]['. g:zdict_default_dict .']\ '. l:statsline_word
-    "execute "silent r !zdict --dict ". g:zdict_default_dict ." --force-color '". l:trimed_word ."'"
 endfunction " }}}
 
 
-function! Query () " {{{
+function! QueryCollins () " {{{
     let l:word = s:get_word()
- 	echo 'querying '.l:word
     execute ' !dict '.l:word
-    echo 'query completed!'
 endfunction " }}}
 
-command! Dict call Query()
-nnoremap <silent> <Leader><Leader>z :call Query()<CR>
-"execute 'nnoremap <silent> <Leader><Leader>z :Dcit<CR>'
+function! QueryBing () " {{{
+    let l:word = s:get_word()
+    execute ' !dict '.l:word.' -s bing'
+endfunction " }}}
+
+function! QueryAddToDeck () " {{{
+    let l:word = s:get_word()
+    execute ' !dict '.l:word.' -a'
+endfunction " }}}
+
+nnoremap <silent> <Leader><Leader>c :call QueryCollins()<CR>
+nnoremap <silent> <Leader><Leader>b :call QueryBing()<CR>
+nnoremap <silent> <Leader><Leader>m :call QueryAddToDeck()<CR>
+
+
